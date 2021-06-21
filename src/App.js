@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import PriceCart from "./components/PriceCart";
+import "bootstrap/dist/css/bootstrap.css";
+import ReactDOM from "react-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
-function App() {
+library.add(fab, faCheckSquare, faCoffee);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5 py-3 px-3 ">
+      <div className="row">
+        <PriceCart
+          col="col-sm-12 col-lg-4 col-md-6"
+          type="FREE"
+          Price="0"
+          User="Single User"
+          storage="5GB Storage"
+          one={true}
+          muted="muted"
+        />
+        <PriceCart
+          col="col-sm-12 col-lg-4 col-md-6"
+          type="PLUS"
+          Price="9"
+          User="5 Users"
+          storage="50GB Storage"
+          one={true}
+          muted=""
+        />
+        <PriceCart
+          col="col-sm-12 col-lg-4"
+          type="PRO"
+          Price="49"
+          User="Unlimited Users"
+          storage="150GB Storage"
+          one={false}
+          muted=""
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

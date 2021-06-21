@@ -1,0 +1,26 @@
+.card {
+  border-radius: 15px !important;
+}
+.btn {
+  border-radius: 50px !important;
+  border-radius: 5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2;
+}
+.price {
+  font-size: 3rem;
+  /* font-weight: bold; */
+}
+.months {
+  font-size: 0.8rem;
+}
+.card :hover .btn {
+  opacity: 1;
+}
+.card:hover {
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+}
